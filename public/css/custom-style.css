@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+/* Override Tailwind's font variables */
+:root {
+  --font-sans: 'Jua', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font-family: var(--font-sans);
+}
+
+body {
+  overflow: hidden;
+}
+
+/* --Nerd-- */
+.thrown-nerd {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  transition: transform .5s linear, opacity .9s;
+  will-change: transform;
+}
+
+@keyframes nerd-hit-wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-10deg);
+  }
+
+  40% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(-6deg);
+  }
+
+  80% {
+    transform: rotate(6deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.nerd-hit {
+  animation: nerd-hit-wobble 0.4s ease;
+}
+
+.nerd-bubble {
+  position: relative;
+  background-color: #fff;
+  border: 4px solid #fb923c;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  margin: 0 auto 1rem;
+}
+
+.nerd-bubble::before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 20px;
+  border-style: solid;
+  border-color: #fb923c transparent transparent transparent;
+  z-index: 0;
+}

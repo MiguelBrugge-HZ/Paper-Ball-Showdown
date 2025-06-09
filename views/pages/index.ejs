@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Paper Ball Showdown</title>
+  <link rel="icon" type="image/x-icon" href="./media/nerd.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/custom-style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+
+<body class="h-screen bg-orange-50">
+  <main class="flex flex-col lg:flex-row justify-center items-center min-h-screen px-2 lg:px-0 container mx-auto">
+
+    <!-- Left Section -->
+    <section
+      class="flex flex-col justify-evenly lg:justify-center h-screen lg:gap-20 items-center lg:items-start w-full lg:w-2/5">
+
+      <figure>
+        <img class="lg:w-3/5 h-auto" src="./media/logo.svg" alt="Logo" />
+      </figure>
+
+      <!-- Mobile-only Nerd and Quote -->
+      <aside class="lg:hidden w-full flex flex-col items-center">
+        <blockquote class="nerd-bubble text-orange-800 text-center">
+          <p id="quote-text" class="text-4xl">
+            <%= fact.text %>
+          </p>
+        </blockquote>
+        <figure>
+          <img class="w-3/5 h-auto mt-4 mx-auto" src="./media/nerd.png" alt="Nerd" />
+        </figure>
+      </aside>
+
+      <!-- Description -->
+      <article class="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left">
+        <header>
+          <h1 class="text-orange-800 text-4xl md:text-5xl lg:text-4xl font-bold">Can you stop this nerd!?</h1>
+        </header>
+        <p class="text-orange-800 opacity-70 text-3xl lg:text-base max-w-prose">
+          Get ready for the ultimate classroom battle in <strong>Paper Ball Showdown!</strong>
+          The annoying nerd won’t stop dropping endless facts, and it’s up to you to shut him down, one paper ball at a
+          time.
+        </p>
+      </article>
+
+      <!-- Call to Action -->
+      <a href="/battle" class="text-4xl lg:text-lg px-10 py-5 lg:px-5 lg:py-2 rounded-2xl lg:rounded-lg border-8 lg:border-4 border-orange-800  bg-orange-400 
+           hover:bg-orange-800 text-white transition-colors duration-200 w-fit shadow-md">
+        Defeat the nerd!
+      </a>
+    </section>
+
+    <!-- Right Section for Desktop only -->
+    <section class="hidden lg:flex flex-col items-center w-2/5 mt-10 lg:mt-0">
+      <blockquote class="nerd-bubble text-orange-800 text-lg text-center mb-4 max-w-md px-4">
+        <p id="quote-text">
+          <%= fact.text %>
+        </p>
+      </blockquote>
+      <figure>
+        <img class="w-full max-w-xs h-auto" src="./media/nerd.png" alt="Nerd" />
+      </figure>
+      </aside>
+    </section>
+  </main>
+
+</body>
+
+</html>
